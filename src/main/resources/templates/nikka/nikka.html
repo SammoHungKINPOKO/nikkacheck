@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>TOP | nikkacheck</title>
+<!--musubiiフレームワークの参照-->
+<link href="/css/musubii.min.css" th:href="@{/css/musubii.min.css}" rel="stylesheet"></link>
+</head>
+<body>
+  <section class="section">
+    <div class="inner">
+      <div class="group">
+        <p class="heading is-xxl">
+          <span th:text="${message}">message</span>
+        </p>
+        <p class="texts">
+          <span class="text">now testing.</span>
+        </p>
+      </div>
+
+      <form class="form" action="/nikka/execute" method="post">
+        <div class="group">
+          <p class="heading is-xl">
+            <span class="is-italic" th:text="${formHeader}">message</span>
+          </p>
+        </div>
+        <div class="group">
+          <ul class="list" th:each="question:${questions}">
+            <li class="item">
+              <p class="heading is-lg">
+                <span th:text=${question}></span>
+              </p>
+              <div class="field">
+                <label><input class="input" type="checkbox" name="answer" /><span class="text">yes</span></label>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="group">
+          <div class="btns">
+            <input class="btn is-plain is-success is-full" type="submit" value="done nikka!"/>
+          </div>
+        </div>
+      </form>
+
+      <div class="groups">
+        <div class="btns">
+          <a class="btn is-plain" href="/">top</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

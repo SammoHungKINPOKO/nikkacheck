@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>TOP | nikkacheck</title>
+<!--musubiiフレームワークの参照-->
+<link th:href="@{/css/musubii.min.css}" rel="stylesheet"></link>
+</head>
+<body>
+  <section class="section">
+    <div class="inner">
+      <div class="group">
+        <p class="heading is-xxl">
+          <span class="" th:text="${hello}">hello</span>
+        </p>
+        <p class="texts">
+          <span class="text">now testing.</span>
+        </p>
+      </div>
+
+      <div class="group">
+        <div class="btns">
+          <a class="btn is-plain is-primary" href="/nikka/begin">nikka!</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
